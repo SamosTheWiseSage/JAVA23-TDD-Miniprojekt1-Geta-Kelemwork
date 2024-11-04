@@ -1,5 +1,6 @@
 package org.example;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -10,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PrimeNumbersTest {
     @Test
+    @DisplayName("Testing that counter is not prime number")
     public void testCounterIsNotPrime() {
         int counterValue = 4;
         boolean result = isPrime(counterValue);
@@ -17,12 +19,14 @@ class PrimeNumbersTest {
     }
 
     @Test
+    @DisplayName("testing that counter is prime number")
     public void testCounterIsPrime() {
         int counterValue = 5;
         boolean result = isPrime(counterValue);
         assertTrue(result, "Counter should be a prime number");
     }
     @Test
+    @DisplayName("testing that 0 is not prime number")
     public void testZeroIsNotPrime() {
         int counterValue = 0;
         boolean result = isPrime(counterValue);
@@ -30,6 +34,7 @@ class PrimeNumbersTest {
     }
 
     @Test
+    @DisplayName("testing one is not a prime number")
     public void testOneIsNotPrime() {
         int counterValue = 1;
         boolean result = isPrime(counterValue);
@@ -37,6 +42,7 @@ class PrimeNumbersTest {
     }
 
     @Test
+    @DisplayName("testing that 2 should be prime number")
     public void testTwoIsPrime() {
         int counterValue = 2;
         boolean result = isPrime(counterValue);
@@ -44,6 +50,7 @@ class PrimeNumbersTest {
     }
 
     @Test
+    @DisplayName("testing negative non prime numbers")
     public void testNegativeNumberIsNotPrime() {
         int counterValue = -5;
         boolean result = isPrime(counterValue);
@@ -51,6 +58,7 @@ class PrimeNumbersTest {
     }
 
     @Test
+    @DisplayName("Testing large prime number")
     public void testLargePrimeNumber() {
         int counterValue = 997;
         boolean result = isPrime(counterValue);
@@ -58,6 +66,7 @@ class PrimeNumbersTest {
     }
 
     @Test
+    @DisplayName("Testing larger non prime number")
     public void testLargeNonPrimeNumber() {
         int counterValue = 1000;
         boolean result = isPrime(counterValue);
@@ -65,6 +74,7 @@ class PrimeNumbersTest {
     }
 
     @Test
+    @DisplayName("Testing non prime numbers")
     public void testAnotherNonPrime() {
         int counterValue = 9;
         boolean result = isPrime(counterValue);
@@ -72,6 +82,7 @@ class PrimeNumbersTest {
     }
 
     @Test
+    @DisplayName("testing Prime numbers")
     public void testAnotherPrime() {
         int counterValue = 11;
         boolean result = isPrime(counterValue);
@@ -80,6 +91,7 @@ class PrimeNumbersTest {
 
     // Test for printCount
     @Test
+    @DisplayName("testing the print count")
     public void testPrintCount() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
@@ -91,6 +103,7 @@ class PrimeNumbersTest {
         System.setOut(System.out);
     }
     @Test
+    @DisplayName("testing to print the sum in console")
     public void testPrintSum() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
